@@ -2,7 +2,7 @@
  * @fileOverview Load locales, any dynamic post-script loading activities.
  */
 
-Exhibit.jQuery(document).ready(function() {
+function initializationFunction() {
     var delays, localeLoaded;
     // Without threading, this shouldn't introduce a race condition,
     // but it is definitely a problem if concurrency comes into play.
@@ -82,4 +82,4 @@ Exhibit.jQuery(document).ready(function() {
     Exhibit.wait(function() {
         Exhibit.jQuery(document).trigger("registerLocalization.exhibit", Exhibit.staticRegistry);
     });
-});
+};
